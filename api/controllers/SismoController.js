@@ -21,7 +21,7 @@ module.exports = {
 	            completeResponse += chunk;
 	        });
 	        response.on('end', function() {
-	            //console.log(completeResponse);
+	            console.log(completeResponse);
 	            parseString(completeResponse, function (err, result) {
 			    	return res.send(JSON.stringify(result["markers"]["marker"]));
 				});  
